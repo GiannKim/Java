@@ -28,4 +28,18 @@ class Main {
     }
   }
 
-  
+  String pigLatin(String word){
+    return word.substring(1)+word.substring(0,1)+ "ay"
+  }
+
+  String nycLocate(String zip){
+    if(zip.substring(0,3).equals("100") || zip.substring(0,3).equals("101") || zip.substring(0,3).equals("102")){
+      return "Manhattan";
+    }
+  }
+
+  boolean validatePswd(String pswd){
+    if(pswd.length()>= 5 && pswd.length()<=8 && pswd.indexOf("*") == -1 && pswd.indexOf("^") == -1 && pswd.indexOf("(") == -1 && pswd.indexOf(")") == -1){
+      return true
+    }
+  }
